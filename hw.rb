@@ -5,7 +5,7 @@ my_lorem = "Lorem Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 def any_text(some_string)
 	dictionary = {}
-	my_lorem.split(" ").each do |word|
+	some_string.split(" ").each do |word|
 	#Put Lorem into dictionary, which is an empty hash, with value of 1
 		if dictionary[word]
 			dictionary[word] += 1
@@ -17,6 +17,26 @@ def any_text(some_string)
 end
 
 puts any_text(my_lorem)
+puts any_text("this is more test. this is sparta")
+
+
+#find the one that has been used the most
+
+def most_used(some_hash)
+	reference = some_hash.first
+	some_hash.each do |compare|
+		if reference[0] > compare[0]
+			reference = compare
+		end
+	end
+	reference
+end
+
+my_hash = any_text(my_lorem)
+
+puts most_used(my_hash)
+
+
 
 
 
