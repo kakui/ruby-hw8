@@ -25,8 +25,8 @@ puts any_text("this is more test. this is sparta")
 def most_used(some_hash)
 	reference = some_hash.first
 	some_hash.each do |compare|
-		if reference[0] > compare[0]
-			reference = compare
+		if compare[1] > reference[1]
+			compare = reference
 		end
 	end
 	reference
