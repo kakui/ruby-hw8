@@ -26,7 +26,7 @@ def most_used(some_hash)
 	reference = some_hash.first
 	some_hash.each do |compare|
 		if compare[1] > reference[1]
-			compare = reference
+			reference = compare
 		end
 	end
 	reference
